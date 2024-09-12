@@ -16,7 +16,7 @@ my $min_cov = 0.8;
 while (<>){
 	s/[\(\)]+//g;
 	next if /^\s+?$/;
-	my ($SW, $div, $ins, $del, $chr, $start, $end, $strand, $id, $type, $TEs, $TEe, $TEleft) = (split)[0,1,2,3,4,5,6,8,9,10,11,12,13];
+	my ($SW, $div, $del, $ins, $chr, $start, $end, $strand, $id, $type, $TEs, $TEe, $TEleft) = (split)[0,1,2,3,4,5,6,8,9,10,11,12,13];
 	next if $type eq "Simple_repeat";
 	next unless $SW =~ /[0-9]+/;
 	if ($stringent == 1){
